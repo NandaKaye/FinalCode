@@ -1,0 +1,175 @@
+print('There are two games in this code!')
+print(' ')
+print('The first game is a Guess the Number game.')
+print('')
+print('If you are unable to guess correctly, you will have one more chance to play       another surprise game for redemption. ')
+
+import random
+
+Guesses = 0
+
+print(' ')
+print(' ')
+print(' ')
+print('Welcome! What is your name?')
+User = input()
+print(' ')
+gender = input('Are you male or female?')
+print(gender)
+
+number = random.randint(1, 50)
+print('')
+print('Well, ' + User + ', the Great Computer Wiz is thinking of a number between 1 and 50')
+
+while Guesses < 4:
+  print('Take a guess.')
+  guess = input()
+  guess = int(guess)
+   
+  Guesses = Guesses + 1
+
+  if guess < number:
+    print('Your guess is too low.')
+ 
+  if guess > number:
+    print('Your guess is too high.')
+  
+  if guess == number:
+    break
+
+
+if guess == number:
+    Guesses = str(Guesses)
+    print('Good job, ' + ' ' + User +  ' You guessed my number in ' + Guesses + ' guesses!')
+    print('')
+
+if guess != number:
+    number = str(number)
+    print('Nope. The number I was thinking of was ' + number + '!')
+    print('')
+    
+    
+    print('Since you were unable to guess my number, I will allow you to  have a second chance!')
+    print(' ')
+    print('Do you wish to play a second game?')
+    print(' ')
+    wish = input ('Yes or No?')
+  
+    if wish == 'no':
+      print('')
+      print('You actually do not have a choice!')
+      print('Let us continue to the next game, shall we?')
+      print('')
+      print('The second game will be a riddle trivia!')
+      print('Riddle me this!')
+      print('')
+      print('What has a head, a tail, is brown, and has no legs?')
+      riddle = input()
+      if riddle == 'penny':
+          print('')
+          print('Congrulations! You were able to solve my riddle! You may continue to the Gift Shop to claim your prize. ')
+      else: 
+            print('')
+            print('You just lost... again. I will allow you to take a prize out of pity. This will not happen again, so try to win the game next time!')
+      print('')
+    else: 
+      print('') 
+      print('The second game will be a riddle trivia!')
+      print('Riddle me this!')
+      print('')
+      print('What has a head, a tail, is brown, and has no legs?')
+      riddle = input()
+      if riddle == 'penny':
+          print('')
+          print('Congrulations! You were able to solve my riddle! You may continue to the Gift Shop to claim your prize. ')
+      else: 
+            print('')
+            print('You just lost... again. I will allow you to take a prize out of pity. This will not happen again, so try to win the game next time!')
+      print('')
+      
+
+
+print(' ')
+
+
+
+if gender == 'female':
+  num_prize2= ['prize1','prize2','prize3','prize4','prize5']
+  print(num_prize2)
+  print(' ')
+  prize2 = ('There are only five prizes to choose from!')
+  print(prize2)
+  print(' ')
+  choice2 = int(input('Pick a number from 1 through 5' + ' '))
+  print(' ')
+  if choice2 == 1:
+      print('You won a $150 Sephora Gift Card!')
+      print('')
+      print('')
+      print('')
+      print('Thank you for playing!')
+  elif choice2 == 2:
+      print('You won a $100 Romwe Gift Card!')
+      print('')
+      print('')
+      print('')
+      print('Thank you for playing!')
+  elif choice2 == 3:
+      print('You won 5 lipglosses, of your choice, from Victoria Secret!')
+      print('')
+      print('')
+      print('')
+      print('Thank you for playing!')
+  elif choice2 == 4:
+      print('You won 3 cat-eye sunglasses, of your choice, from The Boutique!')
+      print('')
+      print('')
+      print('')
+      print('Thank you for playing!')
+  else:
+      print('You won a free 3 month trial to Planet Fitness! Get your sweat on girl!')
+      print('')
+      print('')
+      print('')
+      print('Thank you for playing!')
+      
+if gender == 'male':
+  num_prize= ['prize1','prize2','prize3','prize4','prize5']
+  print(num_prize)
+  print(' ')
+  prize = ('There are only five prizes to choose from!' + ' ')
+  print(prize)
+  print(' ')
+  choice = int(input('Pick a number from 1 through 5'))
+  print(' ')
+  if choice == 1:
+      print('You won a Football signed by Tom Brady!')
+      print('')
+      print('')
+      print('')
+      print('Thank you for playing!')
+      
+  elif choice == 2:
+      print('You won a shaving set!')
+      print('')
+      print('')
+      print('')
+      print('Thank you for playing!')
+  elif choice == 3:
+      print('You won ticket to the next basketball playoff game!')
+      print('')
+      print('')
+      print('')
+      print('Thank you for playing!')
+  elif choice == 4:
+      print('You won a Nike Elite Bookbag!')
+      print('')
+      print('')
+      print('')
+      print('Thank you for playing!')
+  else:
+      print('You won a trip for 2 to a Wrestling Camp. Be ready to feel the pain!')
+      print('')
+      print('')
+      print('')
+      print('Thank you for playing!')
